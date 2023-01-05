@@ -1,0 +1,40 @@
+body {
+    margin: 10px;
+}
+div.item {
+    background-color:aquamarine;
+    border: 1px solid grey;
+    min-height: 50px;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "sidebar content content content"
+    "sidebar comment comment comment"
+    "footer footer footer footer";
+    grid-template-rows: 200px 1fr 1fr 100px;
+    min-height: 150vh;
+    position: relative;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.header {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+}
+.sidebar {
+    grid-area: sidebar;
+}
+.content {
+    grid-area: content;
+}
+.comment {
+    grid-area: comment;
+}
+.footer {
+    grid-area: footer;
+}
